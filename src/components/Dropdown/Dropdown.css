@@ -26,6 +26,7 @@
 .dropdown-button:hover {
   background-color: bisque;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .dropdown-list {
