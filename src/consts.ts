@@ -1,0 +1,1 @@
+export const USER_ROLES: string[] = ["Admin", "User", "Guest"];
