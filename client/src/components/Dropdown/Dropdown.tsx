@@ -33,6 +33,7 @@ const Dropdown: React.FC<DropdownProps> = ({ userRole, onChange }) => {
           {USER_ROLES.filter((item) => item !== userRole).map((item) => (
             <p
               className="dropdown-text"
+              key={`item-${item}`}
               onClick={() => {
                 onChange(item);
                 setOpen(false);
