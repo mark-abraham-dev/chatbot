@@ -99,3 +99,39 @@ html {
 .send-button:hover {
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .app-container {
+    gap: 96px;
+    padding: 80px 96px;
+  }
+
+  .welcome-top-message,
+  .welcome-bottom-message {
+    font-size: 20px;
+  }
+
+  .chat-box {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    gap: 64px;
+    padding: 64px 72px;
+  }
+
+  .welcome-top-message,
+  .welcome-bottom-message {
+    font-size: 16px;
+  }
+
+  .chat-box {
+    padding: 10px 12px;
+  }
+
+  .chat-input {
+    font-size: 10px;
+  }
+}
