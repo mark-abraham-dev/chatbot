@@ -1,7 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/client/node_modules
+/server/app/__pycache__
+/server/app/routers/__pycache__
 /.pnp
 .pnp.js
 
@@ -17,6 +19,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+/client/.env
+/server/.env
 
 npm-debug.log*
 yarn-debug.log*
