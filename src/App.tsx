@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
+import { ArrowUp } from "react-feather";
 import Dropdown from "./components/Dropdown/Dropdown";
-import SendButtonIcon from "./assets/icons/send-button.svg";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -45,12 +45,9 @@ const App: React.FC = () => {
           value={text}
           onChange={handleEdit}
         />
-        <img
-          className="send-button"
-          src={SendButtonIcon}
-          alt="send"
-          onClick={() => sendText(text)}
-        />
+        <div className={`send-button${text.length > 0 ? " typing" : ""}`}>
+          <ArrowUp color="white" strokeWidth={3} />
+        </div>
       </div>
     </div>
   );
