@@ -11,14 +11,20 @@ html {
   font-family: "Inter Variable", sans-serif;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
   gap: 149px;
   align-items: center;
   justify-content: center;
-  padding: 196px 350px 251px 350px;
   height: 100vh;
+  width: 100%;
+  max-width: 740px;
 }
 
 .welcome-box {
