@@ -18,11 +18,13 @@ const Dropdown: React.FC<DropdownProps> = ({ userRole, onChange }) => {
         <p className="dropdown-text">{userRole}</p>
         {open ? (
           <ChevronUp
+            role="button"
             className="dropdown-button"
             onClick={() => setOpen(false)}
           />
         ) : (
           <ChevronDown
+            role="button"
             className="dropdown-button"
             onClick={() => setOpen(true)}
           />

@@ -13,8 +13,7 @@ const App: React.FC = () => {
   };
 
   const sendText = (value: string) => {
-    if (value.length === 0) alert("Input text!");
-    else {
+    if (value.length > 0) {
       fetch(process.env.REACT_APP_SERVER_URL || "", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -55,7 +54,10 @@ const App: React.FC = () => {
           value={text}
           onChange={handleEdit}
         />
-        <div className={`send-button${text.length > 0 ? " typing" : ""}`}>
+        <div
+          className={`send-button${text.length > 0 ? " typing" : ""}`}
+          onClick={() => sendText(text)}
+        >
           <ArrowUp color="white" strokeWidth={3} />
         </div>
       </div>
