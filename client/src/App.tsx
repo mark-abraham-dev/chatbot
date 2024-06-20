@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import { ArrowUp } from "react-feather";
-import axios from "axios";
 import Dropdown from "./components/Dropdown/Dropdown";
 import "./App.css";
 
@@ -16,10 +15,16 @@ const App: React.FC = () => {
   const sendText = (value: string) => {
     if (value.length === 0) alert("Input text!");
     else {
-      axios
-        .post(process.env.REACT_APP_SERVER_URL || "", { question: value })
-        .then((response) => {
-          alert(`Question: ${value}, Answer: ${response.data.answer}`);
+      fetch(process.env.REACT_APP_SERVER_URL || "", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question: value,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          alert(`Question: ${value}, Answer: ${data.answer}`);
         });
       setText("");
     }
