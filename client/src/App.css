@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background-color: #e3e4e6;
+  height: 100%;
+  font-family: "Inter Variable", sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 149px;
+  align-items: center;
+  justify-content: center;
+  padding: 196px 350px 251px 350px;
+  height: 100vh;
+}
+
+.welcome-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.welcome-top-message {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+  margin: 0;
+}
+
+.welcome-bottom-message {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+  margin: 0;
+}
+
+.chat-box {
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.35);
+  border-radius: 23px;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 21px 25px 28px;
+  width: 100%;
+}
+
+.chat-box:focus-within {
+  border-color: rgba(0, 0, 0, 0.75);
+}
+
+.chat-input {
+  border: none;
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 140%;
+  resize: none;
+  width: 100%;
+}
+
+.chat-input:focus {
+  color: black;
+  line-height: 34px;
+  outline: none;
+}
+
+.chat-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.send-button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  height: 42px;
+  width: 42px;
+}
+
+.typing {
+  background-color: black;
+}
+
+.send-button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    gap: 96px;
+    padding: 80px 96px;
+  }
+
+  .welcome-top-message,
+  .welcome-bottom-message {
+    font-size: 20px;
+  }
+
+  .chat-box {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    gap: 64px;
+    padding: 64px 72px;
+  }
+
+  .welcome-top-message,
+  .welcome-bottom-message {
+    font-size: 16px;
+  }
+
+  .chat-box {
+    padding: 10px 12px;
+  }
+
+  .chat-input {
+    font-size: 10px;
+  }
+}
